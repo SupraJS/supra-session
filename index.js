@@ -1,12 +1,12 @@
-/*       .#.                                                       
-        @@@@@                                                      
-        @@@@@                                                      
-          @                                                        
-    .....@@@                                                       
-   .@@@@@@@                                                        
-   @@@@@@@                                                         
-    @@@@@@@:@@@..@@@@@@@  @@@   @@@ @@@@@@@@   @@@@@@@      @@@@   
-   .@@@@@@@@    @@@@@@@@  @@@   @@@ @@@@@@@@@  @@@@@@@@@  @@@@@@@@ 
+/*       .#.
+        @@@@@
+        @@@@@
+          @
+    .....@@@
+   .@@@@@@@
+   @@@@@@@
+    @@@@@@@:@@@..@@@@@@@  @@@   @@@ @@@@@@@@   @@@@@@@      @@@@
+   .@@@@@@@@    @@@@@@@@  @@@   @@@ @@@@@@@@@  @@@@@@@@@  @@@@@@@@
    '@@@@@@@@@@@@@@@       @@@   @@@ @@@    @@@ @@@   @@@ @@@    @@@
 :@@@@@@@@@:     @@@@@@@@  @@@   @@@ @@@@@@@@@  @@@@@@@@@ @@@    @@@
   `@@@@:             @@@  @@@   @@@ @@@#@@@    @@@@@@@@  @@@@@@@@@@
@@ -19,42 +19,42 @@
   Friendly
   Framework.
 
+Session Class File
 */
 
 module.exports = Supra.Class.extend({
 
-	init : function(Session){
-		console.log('session instantiated');
-		this.Session = Session;
-	},
+  init : function(Session){
+    console.log('test');
+    this.Session = Session;
+  },
   createCookie : function(){
 
   },
   reset : function(cookies){
-    cookies.split(';').forEach(function(cookie,index){
-      var cookieName = cookie.split('=')[0];
-      if (cookieName.trim() == Supra.prefs.sessionKey){
+    // console.log(cookies);
+    // cookies.split(';').forEach(function(cookie,index){
+      // var cookieName = cookie.split('=')[0];
+      // if (cookieName.trim() == Supra.prefs.sessionKey){
         /**
          * Cookie exists
          */
-        
-      }else{
+      // }else{
         /**
          * Create a new cookie
          */
-        
-      }
-    })
+      // }
+    // })
 
   },
 
-	write : function(key,value){
-		return this.Session[key] = value;
-	},
+  write : function(key,value){
+    return this.Session[key] = value;
+  },
 
-	read : function(key){
-		return this.Session[key];
-	}
+  read : function(key){
+    return this.Session[key];
+  }
 
 
 })
